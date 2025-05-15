@@ -1,3 +1,73 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    width: 800px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  
+  .header, .footer {
+    text-align: center;
+  }
+  
+  .header img {
+    width: 50px;
+  }
+  
+  .patient-info, .sample-info, .results, .signatures {
+    margin-bottom: 20px;
+  }
+  
+  .results table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .results th, .results td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .results th {
+    background-color: #f2f2f2;
+  }
+  
+  .low {
+    color: red;
+  }
+  
+  .high {
+    color: red;
+  }
+  
+  .signatures div {
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+  }
+  
+  footer {
+    text-align: center;
+  }
+  
+  @keyframes scaleIn {
+    0% {
+      transform: scaleY(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+  .animate-scaleIn {
+    animation: scaleIn 0.3s ease-out forwards;
+  }
+  
