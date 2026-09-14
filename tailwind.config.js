@@ -1,46 +1,30 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  darkMode: "class",
+const config = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-
-    // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
   ],
   theme: {
     extend: {
-      screens: { sm: "480px", md: "768px", lg: "976px", xl: "1440pd" },
-      animation: {
-        fadeIn: "fadeIn 1.5s",
-        bounce:
-          "bounce 0.5s alternate cubic-bezier(0.95, 0.05, 0.795, 0.035) infinite",
-        slideUp: "slideUp 0.5s",
-        slideUpEaseInOut: "slideUp 0.5s ease-in-out",
-        slideUpCubiBezier: "slideUp 1s cubic-bezier(0.165, 0.84, 0.44, 1)",
+      colors: {
+        ink: "#0F1420",
+        panel: "#161C2C",
+        line: "#2A3244",
+        paper: "#ECE9E1",
+        muted: "#A9AEBD",
+        amber: "#E7A33E",
+        teal: "#5FC7B9",
       },
-      animationDelay: {
-        0: "0s",
-        2: "0.2s",
-        4: "0.4s",
-        6: "0.6s",
+      fontFamily: {
+        display: ["var(--font-fraunces)"],
+        sans: ["var(--font-inter)"],
+        mono: ["var(--font-mono)"],
       },
-      keyframes: {
-        fadeIn: {
-          from: { opacity: 0 },
-          to: { opacity: 1 },
-        },
-        slideUp: {
-          from: { transform: "translateY(100%)" },
-          to: { transform: "translateY(0)" },
-        },
-        bounce: {
-          from: { transform: "translateY(10px)" },
-          to: { transform: "translateY(0)" },
-        },
+      maxWidth: {
+        content: "72rem",
       },
     },
   },
   plugins: [],
-}
+};
+
+export default config;
